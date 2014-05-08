@@ -1,0 +1,18 @@
+[alias]
+	st = status
+	s = status
+	c = commit
+	b = branch
+	co = checkout
+	com = checkout master
+[user]
+	name = Adam Spence
+	email = aspence1@gmail.com
+[merge]
+	tool = diffmerge
+[color]
+	ui = true
+[core]
+	excludesfile = /Users/adam/.gitignore_global
+[push]
+	default = simple

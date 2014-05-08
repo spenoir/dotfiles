@@ -1,0 +1,39 @@
+[extensions]
+color =
+convert =
+fetch =
+histedit =
+pager =
+progress =
+rebase =
+record =
+shelve =
+
+[color]
+status.modified = magenta bold
+status.added = green bold
+status.removed = red bold
+status.deleted = cyan bold
+status.unknown = blue bold
+status.ignored = black bold
+diff.trailingwhitespace = none
+
+[ui]
+username = Adam Spence <aspence@lonres.com>
+
+[defaults]
+# suppress noisy extdiff header message
+cdiff = -q
+
+[diff]
+git = True
+ignorews = True
+
+[pager]
+pager = less -FRX
+attend = annotate, cat, diff, export, help, log, unshelve
+
+[alias]
+shortlog = log -M --template '{node|short} | {date|isodatesec} | {author|user}: {desc|strip|firstline}\n'
+st = status
+sum = summary
