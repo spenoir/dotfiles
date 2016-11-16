@@ -12,7 +12,6 @@ export ARCHFLAGS="-arch x86_64"
 
 alias ll="ls -alGp"
 alias ls='ls -Gp'
-alias vim='mvim -v'
 alias bower='noglob bower'
 
 export CLICOLOR=1
@@ -38,8 +37,5 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # npm
 export PATH=$PATH:§:/usr/local/share/npm/bin
-
-# MySQL
-#export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/usr/local/Cellar/mysql/5.5.25/lib"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
