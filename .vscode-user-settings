@@ -1,0 +1,35 @@
+{
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "files.autoSave": "onWindowChange",
+    "editor.fontSize": 14,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": true,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "editor.tabCompletion": true,
+    "sasslint.enable": true,
+    "typescript.tsdk": "/usr/local/lib/node_modules/typescript/lib",
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "debug.showInStatusBar": "always",
+    "git.autofetch": true,
+    "gitlens.keymap": "none",
+    "files.exclude": {
+        "**/*.pyc": true
+    },
+    "tslint.autoFixOnSave": true,
+    "tslint.enable": true,
+    "tslint.alwaysShowRuleFailuresAsWarnings": false,
+    "explorer.confirmDelete": false,
+    "go.gopath": "/Users/adam/.gvm/pkgsets/go1.9/global",
+    "go.goroot": "/Users/adam/.gvm/gos/go1.9",
+    "go.docsTool": "gogetdoc",
+    "gitlens.historyExplorer.enabled": true
+}
