@@ -1,0 +1,55 @@
+{
+"version": "0.2.0",
+"configurations": [
+    {
+        "name": "Launch main process",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+        "program": "${workspaceRoot}/src/main.ts",
+        "protocol": "inspector",
+        "outFiles": [
+          "${workspaceRoot}/dist/*.js"
+        ],
+        "runtimeArgs": [
+            "${workspaceRoot}/dist",
+            "--enable-logging",
+            "--remote-debugging-port=9222",
+            "--debug-brk=5858"
+        ],
+        "trace": "all",
+        "internalConsoleOptions": "openOnSessionStart",
+        "sourceMaps": true,
+        "sourceMapPathOverrides": {
+          "webpack:///*": "/*"
+        },
+        "preLaunchTask": "build-electron"
+    },
+    {
+        "name": "Attach Renderer process",
+        "type":"chrome",
+        "request": "attach",
+        "port": 9222,
+        "sourceMaps": true,
+        "sourceMapPathOverrides": {
+          "webpack:///*": "/*"
+        }
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "Attach Karma Chrome",
+      "address": "127.0.0.1",
+      "webRoot": "${workspaceRoot}/src",
+      "port": 9223
+    },
+    {
+      "name": "Launch e2e",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
+      "protocol": "inspector",
+      "args": ["${workspaceRoot}/protractor.conf.js"]
+    }
+]
+}
